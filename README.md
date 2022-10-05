@@ -4,6 +4,18 @@
 
 A simple responsive adventure website that suggests adventure items that would guide end end users decision on things to try out, A complete guide about how to build this project from scratch is covered in this [Youtube video](https://www.youtube.com/)
 
+## Preview Application
+
+- https://dx-explore.netlify.app/
+
+## Figma design
+
+- https://www.figma.com/file/48O6jwwqsRTbss0WXKKj1W/Dx-Explorer?node-id=0%3A1
+
+## Youtube Tutorial Link
+
+- https://youtu.be/jz4SY1XyxlI
+
 # Steps to use Application
 
 - Download Entire code

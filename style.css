@@ -6,3 +6,248 @@
     --box-shadow: 7px 11px 20px -10px rgba(0, 0, 0, .33);
     --linear-gradient: linear-gradient(to right, rgba(255, 99, 71, 0.3), rgba(255, 99, 71, 0.6));
 }
+
+/* Page resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Page resets */
+/* reusables */
+.btn {
+    padding: 12px 20px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn-main {
+    background: var(--main-color);
+    color: white;
+}
+
+.btn-main:hover {
+    border: 2px solid var(--main-color);
+    background: transparent;
+}
+
+.btn-light {
+    background: var(--white-color);
+    color: var(--main-color);
+}
+
+.btn-light:hover {
+    background: transparent;
+    border: 2px solid var(--white-color);
+    color: var(--white-color);
+}
+
+.brand-logo {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--white-color);
+}
+
+/* reusables */
+/* Header section starts here */
+header {
+    width: 100%;
+    min-height: 420px;
+    background: var(--linear-gradient), url('./img/header.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.nav-desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white-color);
+    padding: 0 40px;
+}
+
+.nav-desktop ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-desktop li {
+    position: relative;
+}
+
+.nav-desktop li a {
+    color: var(--white-color);
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.7s all ease;
+
+}
+
+.nav-desktop li a:hover {
+    color: var(--main-color);
+}
+
+
+
+.nav-mobile {
+    display: none;
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav-mobilebrand {
+    background: var(--main-color);
+    width: 100%;
+    display: flex;
+    padding: 5px 40px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 500;
+}
+
+.mobile-links-holder {
+    border-top: 2px solid var(--white-color);
+    list-style: none;
+    z-index: 2;
+    width: 100%;
+    position: fixed;
+    visibility: hidden;
+    background: var(--main-color);
+    transform: translateY(-220%);
+    transition: all 0.5s ease;
+}
+
+.showmobile-links {
+    transform: translateY(0);
+    visibility: visible;
+
+}
+
+.mobile-links-holder a {
+    display: block;
+    text-decoration: none;
+    color: var(--white-color);
+    padding: 15px 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+.mobile-links-holder a:hover {
+    background: var(--white-color);
+    color: var(--main-color);
+}
+
+/* Animated Hamburger menu starts here */
+.hamburger {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.bars {
+    background: #fff;
+    height: 3px;
+    width: 60%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.4s ease;
+
+}
+
+.bars::before {
+    content: '';
+    width: 80%;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    transform: translateY(-8px);
+
+}
+
+.bars::after {
+    content: '';
+    width: 80%;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    transform: translateY(8px);
+}
+
+.crossburger .bars {
+    background: transparent;
+    transform: rotate(180deg);
+}
+
+.crossburger .bars::before {
+    transform: translateY(0px) rotate(45deg);
+}
+
+.crossburger .bars::after {
+    transform: translateY(0px) rotate(-45deg);
+
+}
+
+/* Animated Hamburger menu ends here */
+
+
+
+.header-text-holder {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 50px;
+}
+
+.header-text-content {
+    width: 50%;
+    color: var(--white-color);
+    padding: 40px;
+}
+
+.header-text-content p {
+    margin: 20px 0 10px 0;
+    line-height: 1.5;
+}
+
+/* Header section ends here */
+
+
+/* Mobile responsiveness starts here*/
+@media screen and (max-width:768px) {
+    .nav-desktop {
+        display: none;
+
+    }
+
+    .nav-mobile {
+        display: block;
+    }
+
+    .header-text-content {
+        min-width: 100%;
+    }
+}
+
+/* Mobile responsiveness ends here*/
