@@ -1,0 +1,8 @@
+:root {
+    --main-color: #FF6347;
+    --white-color: #fff;
+    --black-color: #000;
+    --gray-color: #777;
+    --box-shadow: 7px 11px 20px -10px rgba(0, 0, 0, .33);
+    --linear-gradient: linear-gradient(to right, rgba(255, 99, 71, 0.3), rgba(255, 99, 71, 0.6));
+}
