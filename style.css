@@ -302,6 +302,50 @@ main {
 
 /* main section ends here */
 
+/* footer section starts here */
+footer {
+    color: var(--white-color);
+}
+
+.footer-bottom,
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-top {
+    padding: 20px 40px;
+    background: var(--main-color);
+}
+
+.footer-bottom {
+    padding: 5px 40px;
+    background: var(--black-color);
+}
+
+.footer-icons {
+    margin: 10px 0;
+}
+
+.footer-icons a {
+    color: var(--white-color);
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 18px;
+}
+
+/* footer section ends here */
+
+/* safety measures */
+header,
+main,
+footer {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* safety measures */
 
 /* Mobile responsiveness starts here*/
 @media screen and (max-width:768px) {
@@ -320,6 +364,11 @@ main {
 
     .cards {
         min-width: 330px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
